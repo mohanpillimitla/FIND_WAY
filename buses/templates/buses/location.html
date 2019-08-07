@@ -1,0 +1,36 @@
+{% extends 'buses/base.html' %}
+
+{% block content %}
+
+<legend></legend>
+
+{% for obj in form %}
+<div class="content-section">
+	<ul>
+
+
+<li><p>BUS_ID:<a href="bus/{{obj.id}}"> {{obj.name}}</a></p></li>
+
+<li><p>ADDRESS:{{obj.address}}</p></li>
+
+<li><p>DISTANCE:{{obj.distance}}</p></li>
+
+
+
+
+</ul>
+
+
+</div>
+<legend></legend>
+
+
+
+
+
+{% endfor %}
+
+
+{% endblock %}
+
+

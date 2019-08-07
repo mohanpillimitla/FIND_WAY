@@ -1,0 +1,33 @@
+{% extends 'buses/base.html' %}
+
+{% block content %}
+<form method="POST">
+	{% csrf_token %}
+	<div style="margin-bottom:5em;">
+
+{{form}}
+
+</div>
+<div style="display:grid;place-items:center;"><input type="submit" value="getbusstations">
+
+
+</form>
+<script>
+	window.onload = function() {
+  var startPos;
+  var geoSuccess = function(position) {
+    startPos = position;
+    document.getElementById('id_latitude').value = startPos.coords.latitude;
+    document.getElementById('id_longitude').value = startPos.coords.longitude;
+  };
+  navigator.geolocation.getCurrentPosition(geoSuccess);
+};
+
+
+
+
+
+	</script>
+
+
+{% endblock %}

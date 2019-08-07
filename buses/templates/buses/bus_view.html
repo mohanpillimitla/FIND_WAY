@@ -1,0 +1,36 @@
+{% extends 'buses/base.html' %}
+
+{% block content %}
+
+<legend></legend>
+
+{% for obj in form %}
+<div class="content-section">
+	<ul>
+
+<li><p>NAME:{{obj.bus_station_id.name}}</p></li>
+
+<li><p><a href="https://www.google.com/maps/place/{{obj.bus_station_id.address}}">ADDRESS:{{obj.bus_station_id.address}}</a></p></li>
+
+
+
+<li><p>ARRIVAL_TIME:{{obj.arrival_time}}</p></li>
+
+
+
+</ul>
+
+
+</div>
+<legend></legend>
+
+
+
+
+
+{% endfor %}
+
+
+{% endblock %}
+
+
